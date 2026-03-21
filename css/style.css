@@ -1,0 +1,94 @@
+    * {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 15px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        font-size: 13pt;
+        align-items: center;
+    }
+
+    header a {
+        justify-self: end;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .stickers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .box {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        filter: drop-shadow(1px 3px 4px #00000078);
+    }
+
+    .dropdown-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .dropbtn {
+        border: 1px solid black;
+        background-color: white;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 100px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #e7e7e7;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .arrow-down {
+        display: inline;
+        margin-bottom: 20x;
+    }
+
+    @media screen and (max-width: 600px) {
+        .stickers {
+            grid-template-columns: 1fr;
+        }
+    }

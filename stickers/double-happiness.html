@@ -1,141 +1,187 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Double Happiness</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Happiness</title>
+  <style>
+    * {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      box-sizing: border-box;
+    }
 
-<style>
-* {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
+    body {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 10px;
+    }
 
-.item {
-    padding: 20px;
-}
+    .item {}
 
-header {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  padding: 15px;
-  width: 100%;
-  border-bottom: 1px solid black;
-  font-size: 13pt;
-}
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 15px;
+      width: 100%;
+      border-bottom: 1px solid black;
+      font-size: 13pt;
+    }
 
-header a {
+    a {
+      color: black;
+    }
 
-}
+    img {
+      width: 75%;
+      height: auto;
+      display: block;
+      margin: 40px auto;
+      filter: drop-shadow(1px 3px 4px #00000078);
+    }
 
-body {
-      overflow-x: hidden;
-}
+    .container-category {
+      display: grid;
+      grid-template-columns: .8fr 1fr 1fr 1fr;
+    }
 
-a {
-    color: black;
-}
+    .container-name {
+      display: grid;
+      grid-template-columns: .8fr 1fr 1fr 1fr;
+    }
 
-.about {
-margin-left: 185%;
-}
-.how-to {
-    margin-left: 92%;
-}
+    .container {
+      position: relative;
+      margin-top: 40px;
+      bottom: 0;
+      padding: 20px;
+    }
 
-img {
-  width: 75%;
-  height: auto;
-  display: block;
-  margin: 40px auto;
-          filter: drop-shadow(1px 3px 4px #00000078);
-    margin-top: -30px;
-}
-
-
-.container {
-  display: grid;
-  grid-template-columns: 50% 16% 16% 16%;
-  grid-template-rows: 1fr 1fr;
-}
-.container div {
-  padding: 10px;
-  font-size: 30px;
-}
-
-.background {
-border-bottom: 1px solid black;}
-
-.name {
-    font-size: 18pt !important;
-    margin-top: ;
+    .name {
+      font-size: 13pt;
       text-transform: uppercase;
+    }
 
-}
+    .category {
+      font-size: 13pt !important;
+    }
 
-.category {
-    font-size: 13pt !important;
-    height: 0px;
-    }   
+    .back {
+      top: 10px;
+      text-decoration: none;
+    }
 
-.back {
-    top: 10px;
-    text-decoration: none;
-}
+    .line {
+      border-top: 1px solid black;
+      z-index: 2;
+      top: 10px;
+    }
 
-.line {
-    border-top: 1px solid black;
-  z-index: 2;}
-
-  .line-back {
+    .line-back {
       border-top: 1px solid black;
       position: relative;
       top: 15px;
-  z-index: 2;
-}
+      z-index: 2;
+    }
 
-    
-.arrow-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
+    .arrow-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
     .arrow-left {
       justify-content: start;
+      font-size: 10pt;
     }
+
     .arrow-right {
       justify-self: end;
+      font-size: 10pt;
     }
-</style>
+
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+      filter: blur(20px);
+      opacity: 50%;
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+      .category {
+        font-size: 13px !important;
+      }
+
+      .name {
+        font-size: 13px !important;
+      }
+
+      header {
+        font-size: 10px;
+      }
+
+      .back {
+        font-size: 10px;
+      }
+
+      img {
+        margin-top: 40px;
+        width: 100%;
+        height: auto;
+      }
+
+      .container {
+        position: relative;
+        margin-top: 130px;
+        bottom: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
 <body>
-    
-<header>
-    <div>Fruit Sticker Archive</div>
-    <a class="about" href="about/about.html">About</a>
-    <a class="how-to" href="how to/how-to.html">How to</a>
-</header>
-
-<div class="item">
-    <div><a href="../index.html" class="back">← Back</a></div>
-    <div class="line-back"></div>
-<div><div class="background"><img src="1 - DoubleHappiness.png" alt="double happiness"></img></div></div>
+  <div class="iframe-background">
+    <iframe src="../index.html" frameborder="0"></iframe>
+  </div>
+  <div class="main-content">
+    <header>
+      <div class="item">
+        <a href="../index.html" class="back">← Back</a>
+      </div>
+    </header>
+    <div class="background">
+      <img src="1 - DoubleHappiness.png" alt="double happiness">
+    </div>
     <div class="container">
+      <div class="line"></div>
+      <div class="container-category">
         <div class="category">PLU</div>
-
-<div class="category">Fruit Kind</div>
-<div class="category">Country of Origin</div>
-<div class="category">Brand</div>
-</div>
-<div class="line"></div>
-<div class="container">
-<div class="name">#4102</div>
-<div class="name">Orange</div>
-<div class="name">USA</div>
-<div class="name">Double Happiness</div>
-        </div>
-<div class="line"></div>
-<div class="arrow-container">
-    <a class="arrow-left" href="">←</a>
-    <a class="arrow-right" href="">→</a>
-</div>
-</div>
+        <div class="category">Fruit Kind</div>
+        <div class="category">Country of Origin</div>
+        <div class="category">Brand</div>
+      </div>
+      <div class="line"></div>
+      <div class="container-name">
+        <div class="name">#4102</div>
+        <div class="name">Orange</div>
+        <div class="name">USA</div>
+        <div class="name">Double Happiness</div>
+      </div>
+      <div class="line"></div>
+      <div class="arrow-container">
+        <a class="arrow-left" href="">←</a>
+        <a class="arrow-right" href="halos.html">→</a>
+      </div>
+    </div>
+  </div>
+  <script></script>
 </body>
 </html>

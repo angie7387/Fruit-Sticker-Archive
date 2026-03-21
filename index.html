@@ -2,79 +2,92 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Fruit Sticker Archive</title>
+  <meta charset="UTF-8">
+  <title>Fruit Sticker Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style>
-* {
-  margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-header {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  padding: 15px;
-  width: 100%;
-  border-bottom: 1px solid black;
-  font-size: 13pt;
-}
-
-header a {
-
-}
-
-body {
-      overflow-x: hidden;
-
-}
-.stickers {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-a {
-    color: black;
-}
-
-.about {
-margin-left: 185%;
-}
-.how-to {
-    margin-left: 92%;
-
-float: right;
-}
-
-img {
-        max-width: 100%;
-        filter: drop-shadow(1px 3px 4px #00000078);
-}
-        
-    </style>
 </head>
-
 
 <body>
 
-<header>
+  <header>
     <div>Fruit Sticker Archive</div>
-        <a class="about" href="about/about.html">About</a>
-        <a class="how-to" href="how to/how-to.html">How to</a>
-</header>
+    <a href="about/about.html">About</a>
+  </header>
 
-    <div class="stickers">
-        <a href="stickers/double-happiness.html"><img src="assets/1 - DoubleHappiness.png" alt="double happiness"></a>
-        <img src="assets/1 - Halos.png" alt="halos">
-        <img src="assets/1 - Jaffa Red Pomelo- Palestinian Colors.png" alt="jaffa">
-        <img src="assets/1 - Jaffa Sweetie.png" alt="jaffa">
-        <img src="assets/1 - Mike's Melons.png" alt="Mike's Melons">
-        <img src="assets/1 - SlimCado.png" alt="SlimCado">
-        <img src="assets/1- CHIQUITA STICKER.png" alt="Chiquita">
+  <div class="dropdown-container">
 
+    <div class="dropdown">
+<button class="dropbtn">
+  <span class="label">Fruit Kind</span>
+  <span class="arrow-down">⌄</span>
+</button>
+
+      <div class="dropdown-content">
+        <a onclick="filterObjects('avocado')">Avocado</a>
+        <a onclick="filterObjects('banana')">Banana</a>
+        <a onclick="filterObjects('citrus')">Citrus</a>
+        <a onclick="filterObjects('all')">Show All</a>
+      </div>
     </div>
 
-    
+    <div class="dropdown">
+      <button class="dropbtn">Country ⌄</button>
+      <div class="dropdown-content">
+        <a onclick="filterObjects('canada')">Canada</a>
+        <a onclick="filterObjects('mexico')">Mexico</a>
+        <a onclick="filterObjects('usa')">USA</a>
+        <a onclick="filterObjects('all')">Show All</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Brand ⌄</button>
+      <div class="dropdown-content">
+        <a onclick="filterObjects('dole')">Dole</a>
+        <a onclick="filterObjects('chiquita')">Chiquita</a>
+        <a onclick="filterObjects('all')">Show All</a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stickers">
+
+    <a class="box orange usa show" href="stickers/double-happiness.html">
+      <img src="assets/1 - DoubleHappiness.png">
+    </a>
+
+    <a class="box citrus usa show" href="stickers/halos.html">
+      <img src="assets/1 - Halos.png">
+    </a>
+
+    <a class="box citrus mexico show" href="stickers/jaffa.html">
+      <img src="assets/1 - Jaffa Red Pomelo- Palestinian Colors.png">
+    </a>
+
+    <div class="box citrus usa show">
+      <img src="assets/1 - Jaffa Sweetie.png">
+    </div>
+
+    <div class="box melon usa show">
+      <img src="assets/1 - Mike's Melons.png">
+    </div>
+
+    <div class="box avocado mexico show">
+      <img src="assets/1 - SlimCado.png">
+    </div>
+
+    <div class="box banana mexico chiquita show">
+      <img src="assets/1- CHIQUITA STICKER.png">
+    </div>
+
+  </div>
+<script src="script.js"></script>
+
 </body>
 
 </html>

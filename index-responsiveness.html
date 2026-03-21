@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+web 1024
+<style>
+    #grid-space { 
+    display:grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     height: 100%;
+    width: 100%;
+    border: solid black 1px;
+    }
+    .grid-item {
+        display: flex;
+        font-size: 40px;
+        border: solid black 1px;
+        justify-content: center;
+    }
+
+@media screen and (max-width: 480px){
+    body {
+        background-color: aqua;
+    }
+
+    #main-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-item {
+        font-size: 24px;
+    }
+}
+
+
+</style>
+<body>
+    
+<div id="grid-space">
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div><div class="grid-item">Title</div>
+<div class="grid-item">Title</div><div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+<div class="grid-item">Title</div>
+
+    </div>
+
+</body>
+</html>

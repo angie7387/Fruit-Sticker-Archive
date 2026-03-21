@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fruit Sticker Archive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 15px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  font-size: 13pt;
+  align-items: center;
+}
+
+header a {
+  justify-self: end;
+}
+
+body {
+      overflow-x: hidden;
+
+}
+.stickers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+a {
+    color: black;
+}
+
+img {
+        max-width: 100%;
+        height: auto;
+                filter: drop-shadow(1px 3px 4px #00000078);
+}
+
+    @media screen and (max-width: 600px) { 
+          header {
+    font-size: 10px;
+  }
+    .stickers {
+    grid-template-columns: 1fr;
+  }
+    #sort-select {
+        font-size: 10px;
+    }
+
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.sort-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#sort-select, #fruit-select, #country-select, #brand-select {
+    font-family: inherit;
+    font-size: 13pt;
+}
+
+        
+    </style>
+</head>
+
+
+<body>
+
+<header>
+    <div>Fruit Sticker Archive</div>
+        <a class="about" href="about/about.html">About</a>
+</header>
+
+<div class="dropdown">
+    <button class="dropbtn">Dropdown Menu</button>
+    <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+<div class="sort-container">
+<label for="sort-select">Sort by:</label>
+<select id="sort-select">
+<option value="default">Default</option>
+<option value="fruit">Fruit Kind</option>
+<option value="country">Country</option>
+<option value="brand">Brand</option>
+</select>
+</div>
+
+    <div class="stickers">
+        <a href="stickers/double-happiness.html"><img src="assets/1 - DoubleHappiness.png" alt="double happiness"></a>
+        <a href="stickers/halos.html"><img src="assets/1 - Halos.png" alt="halos"></a>
+        <a href="stickers/jaffa.html"> <img src="assets/1 - Jaffa Red Pomelo- Palestinian Colors.png" alt="jaffa"></a>
+        <img src="assets/1 - Jaffa Sweetie.png" alt="jaffa">
+        <img src="assets/1 - Mike's Melons.png" alt="Mike's Melons">
+        <img src="assets/1 - SlimCado.png" alt="SlimCado">
+        <img src="assets/1- CHIQUITA STICKER.png" alt="Chiquita">
+
+    </div>
+
+    
+</body>
+
+</html>
